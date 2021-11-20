@@ -1,0 +1,30 @@
+{
+  "name": "front-end-laboratory",
+  "version": "0.1.0",
+  "description": "前端实验室，用于学习和测试一些新技术或基础技术，主要包括：canvas、webgl、svg等绘图相关，gltf、geoJSON等特殊数据，xhr、ws、fetch、http、prototype、display等基础，各种web端的app和桌面类应用，色彩处理、audio等专业技术，算法设计和整体架构，人工智能和机器学习（比如翻译、图片内容识别等），性能优化和网络安全等各种作为一个前端人需要掌握的技术。",
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "nodejs -d build && webpack --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@hai2007/algorithm": "^0.6.3",
+    "@hai2007/nodejs": "^2.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@hai2007/polyfill": "^0.1.1",
+    "@hai2007/style": "^0.3.0",
+    "nefbl": "^0.2.4",
+    "sprout-ui": "^0.1.0"
+  }
+}
