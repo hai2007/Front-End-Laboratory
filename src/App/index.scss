@@ -1,0 +1,58 @@
+header {
+    padding: 0 70px;
+    height: 90px;
+
+    &>h2 {
+        background-image: url('./logo.png');
+        background-repeat: no-repeat;
+        background-size: 70px auto;
+        line-height: 90px;
+        background-position: 10px center;
+        padding-left: 100px;
+        display: inline-block;
+    }
+
+    &>.links {
+        float: right;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-right: 50px;
+
+        &>a {
+            position: relative;
+            padding-right: 40px;
+            color: #182136;
+            font-weight: 800;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                content: " ";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-image: url('./image/link.png');
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 3px center;
+            }
+        }
+    }
+}
+
+div {
+    &.tips {
+        padding: 0 70px;
+        background-color: #015699;
+        line-height: 60px;
+        color: white;
+        font-size: 22px;
+    }
+
+    &.content {
+        padding: 0 70px;
+    }
+}
