@@ -4,9 +4,14 @@ body {
 }
 
 .link {
-    color: #015699;
-    text-decoration: underline;
-    padding: 0 10px;
+    font-weight: 800;
+    padding: 0 5px;
+    border: 1px solid rgb(185, 202, 219);
+    color: rgb(243, 242, 236);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .doc-view {

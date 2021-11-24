@@ -28,17 +28,6 @@ header {
             &:hover {
                 text-decoration: underline;
             }
-
-            &::after {
-                content: " ";
-                display: inline-block;
-                width: 30px;
-                height: 30px;
-                background-image: url('./image/link.png');
-                position: absolute;
-                background-repeat: no-repeat;
-                background-position: 3px center;
-            }
         }
     }
 }
