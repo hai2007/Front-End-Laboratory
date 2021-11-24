@@ -1,6 +1,7 @@
 body {
     font-family: serif;
     min-width: 1000px;
+    background-color: rgb(185, 202, 219);
 }
 
 .link {
@@ -19,5 +20,9 @@ body {
 
     h2 {
         text-align: center;
+    }
+
+    p {
+        color: rgb(185, 202, 219);
     }
 }

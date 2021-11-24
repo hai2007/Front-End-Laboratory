@@ -1,6 +1,7 @@
 header {
     padding: 0 70px;
     height: 90px;
+    background-color: white;
 
     &>h2 {
         background-image: url('./logo.png');
@@ -39,6 +40,7 @@ div {
         line-height: 60px;
         color: white;
         font-size: 22px;
+        position: relative;
     }
 
     &.content {
@@ -47,6 +49,9 @@ div {
         background-color: black;
         color: rgb(185, 202, 219);
         min-height: calc(100vh - 150px);
+        width: 900px;
+        margin: 0px auto;
+        box-shadow: 0 0 15px 12px #607d8b;
     }
 }
 
