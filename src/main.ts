@@ -1,5 +1,6 @@
 import { platform } from 'nefbl'
 import normalize from "@hai2007/style/normalize.css"
+import doc from "@hai2007/style/doc-view.css"
 import style from './style.scss'
 
 // 兼容文件
@@ -15,7 +16,7 @@ platform({
     el: document.getElementById('root'),
 
     // 全局样式
-    styles: [normalize, style]
+    styles: [normalize, doc, style]
 
 })
 

@@ -1,0 +1,49 @@
+header {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 26px;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+p {
+    padding-top: 10px;
+    line-height: 2em;
+}
+
+.list {
+    padding: 30px 50px 0 50px;
+
+    a {
+        display: inline-block;
+        width: 50%;
+        text-decoration: underline;
+        color: #ffe1af;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            content: " ";
+            left: -15px;
+            top: 7px;
+        }
+    }
+}
+
+.white-color {
+    color: white;
+}

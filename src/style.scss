@@ -1,3 +1,18 @@
 body {
-    font-family: cursive;
+    font-family: serif;
+    min-width: 1000px;
+}
+
+.link {
+    color: #015699;
+    text-decoration: underline;
+    padding: 0 10px;
+}
+
+.doc-view {
+    color: rgb(185, 202, 219);
+
+    h2 {
+        text-align: center;
+    }
 }

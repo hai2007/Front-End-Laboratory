@@ -2,7 +2,8 @@ import { Component, ref } from 'nefbl'
 import urlFormat from '../tool/urlFormat'
 
 let lazyLoad = {
-    Index: () => import('./Index/index')
+    Index: () => import('./Index/index'),
+    "Analyze-The-String": () => import('./Analyze-The-String/index')
 }
 
 import style from './index.scss'
@@ -24,18 +25,29 @@ export default class {
         }
     }
 
+    goHome() {
+
+        window.location.href = '#/Index'
+        this.loadPage('Index')
+
+    }
+
     $mounted() {
 
         let pagename = urlFormat(window.location.href).router[0]
 
         if (!(pagename in lazyLoad)) pagename = 'Index'
 
+        this.loadPage(pagename)
+
+    }
+
+    loadPage(pagename) {
         lazyLoad[pagename]().then(data => {
 
             this.page = data.default
 
         })
-
     }
 
 }

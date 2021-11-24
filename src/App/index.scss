@@ -53,6 +53,27 @@ div {
     }
 
     &.content {
-        padding: 0 70px;
+        padding: 70px;
+        padding-top: 0;
+        background-color: black;
+        color: rgb(185, 202, 219);
+        min-height: calc(100vh - 150px);
+    }
+}
+
+footer {
+    height: 97px;
+    text-align: center;
+    background-color: #015699;
+    border-top: 1px solid #015699;
+    line-height: 2em;
+    padding: 20px 0;
+    font-size: 14px;
+    color: rgb(185, 202, 219);
+
+    a {
+        padding: 0 5px;
+        color: rgb(220, 228, 230);
+        text-decoration: underline;
     }
 }
