@@ -28,7 +28,12 @@ p {
         color: #ffe1af;
         position: relative;
         cursor: pointer;
-        &:hover{
+
+        &.one {
+            width: 100%;
+        }
+
+        &:hover {
             text-decoration: underline;
         }
 

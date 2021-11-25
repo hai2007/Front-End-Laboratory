@@ -20,6 +20,10 @@ body {
 
     h2 {
         text-align: center;
+        &>div{
+            font-size: 0.6em;
+            margin-top: 10px;
+        }
     }
 
     p {
