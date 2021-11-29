@@ -1,0 +1,60 @@
+<div class='doc-view'>
+    <h2>
+        借助一个数组消除递归
+        <div>
+            （以自定义一个outerHTML为例）
+        </div>
+    </h2>
+    <p>
+        现在的需求是这样的：有一个DOM节点，我们希望获取其outerHTML，但是由于个别浏览器不支持这个属性，因此需要做polyfill进行兼容。
+    </p>
+    <p>
+        比如可以采用递归的方式快速实现：
+    </p>
+    <pre ui-code>
+function getTemplate(node){
+
+    如果是结点:
+
+        template="<结点>"
+        循环每个孩子：
+            template+=getTemplate(孩子结点)
+        return template+="</结点>"
+
+    如果是文本：
+        return 文本自身
+}
+    </pre>
+    <p>
+        可以看到，如果孩子层次比较深，对于每一个节点而言，在孩子解析完成前，自己都无法被释放（主要是局部变量等），这会导致一定的资源浪费。
+    </p>
+    <p>
+        其实，我们可以借助消耗一个一维数组来消除递归。
+    </p>
+    <pre ui-code>
+needCalcs=[结点]
+index=0
+
+while (index < needCalcs.length) {
+    从index开始，寻找到第一个结点
+        如果到结尾都没有，结束
+        否则：
+            如果是结点：
+                在当前index位置插入结点开始部分、孩子结点们、结点结束部分
+            否则：
+                把当前文本结点插入index位置即可
+}
+
+template=needCalcs.join("")
+    </pre>
+    <p class='warn'>
+        温馨提示：此处可能借助innerHTML来更简单，我们主要是提供一种思路，实际运用的时候，还需要考虑编程环境所提供的资源。
+    </p>
+    <p>
+        其实，在遍历树图的时候，借助一个数组或多个来实现遍历是很有用的思路，虽然在大部分的情况下，递归的写法相对更简单，但非递归除了可以节约资源外，调试也更方便。
+    </p>
+    <a class='open-demo' target="_blank"
+        href="https://github.com/hai2007/xhtml-engine/blob/master/src/.inner/template.js">
+        查看用例>>>
+    </a>
+</div>

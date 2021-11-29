@@ -3,7 +3,8 @@ import urlFormat from '../tool/urlFormat'
 
 let lazyLoad = {
     Index: () => import('./Index/index'),
-    "Analyze-The-String": () => import('./Analyze-The-String/index')
+    "Analyze-The-String": () => import('./Analyze-The-String/index'),
+    "Eliminate-Recursion": () => import('./Eliminate-Recursion/index')
 }
 
 import style from './index.scss'

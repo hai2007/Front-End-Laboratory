@@ -28,6 +28,7 @@ p {
         color: #ffe1af;
         position: relative;
         cursor: pointer;
+        padding: 5px 0;
 
         &.one {
             width: 100%;
@@ -46,7 +47,7 @@ p {
             background-color: white;
             content: " ";
             left: -15px;
-            top: 7px;
+            top: 12px;
         }
     }
 }
