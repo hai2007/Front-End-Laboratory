@@ -7,17 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于字符串解析的一点理解</title>
     <script src='https://cdn.jsdelivr.net/npm/@hai2007/algorithm@0'></script>
+    <script src='https://cdn.jsdelivr.net/npm/open-web-console'></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #console {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div>
-        Tips:你可以试试F12打开浏览器控制台查看打印结果！
-    </div>
+    <div id='console'></div>
 
     <script>
 
-        console.log(algorithm.xhtmlToJson(`
+        // 辅助页面打印的插件
+        // https://hai2007.github.io/Open-Web-Console/
+        var myConsole = new OpenWebConsole({
+            el: document.getElementById('console')
+        });
+
+        var result = algorithm.xhtmlToJson(`
 <group>
     <arc c-bind:cx='_width*0.5' c-bind:cy='_height*0.5' c-bind:radius1='_min*0.5' radius2='100' deg='120deg' />
     <group c-for='value in dataList'>
@@ -30,7 +45,9 @@
     </path>
     <text c-bind:x='_width*0.5' c-bind:y='_height*0.5'>文字</text>
 </group>
-`))
+`);
+
+        myConsole.debug(result);
 
     </script>
 
