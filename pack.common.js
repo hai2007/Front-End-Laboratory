@@ -11,7 +11,8 @@ module.exports = {
     // 对导入路径重定向
     redirect: {
         'nefbl': "./src/lib/nefbl.js",
-        "open-web-editor": "./src/lib/open-web-editor.js"
+        "open-web-editor": "./src/lib/open-web-editor.js",
+        'clunch': "./src/lib/clunch.js"
     },
 
     // 配置特殊文件解析loader
