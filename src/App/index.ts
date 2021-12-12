@@ -1,11 +1,7 @@
 import { Component, ref } from 'nefbl'
 import urlFormat from '../tool/urlFormat'
 
-let lazyLoad = {
-    Index: () => import('./Index/index'),
-    "Analyze-The-String": () => import('./Analyze-The-String/index'),
-    "Eliminate-Recursion": () => import('./Eliminate-Recursion/index')
-}
+import lazyLoad from './lazy-load'
 
 import style from './index.scss'
 import template from './index.html'

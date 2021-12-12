@@ -1,5 +1,5 @@
 import xhtml from '@hai2007/tool/xhtml'
-let OpenWebEditor = require('open-web-editor')
+import OpenWebEditor from 'open-web-editor'
 import { Directive } from 'nefbl'
 
 @Directive({
@@ -71,8 +71,7 @@ export default class {
             cursor: "pointer",
             "z-index": 1,
             "line-height": '20px',
-            "background-color": "#ffffff",
-            "color": "#000000",
+            "background-color": "#f8f8f8",
             "padding": "5px 10px"
         })
 
